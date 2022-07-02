@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="de">
+<head prefix="og: https://ogp.me/ns#">
+  <title>EasyFlick Homepage</title>
+
+  <meta charset="UTF-8">
+  <meta name="keywords" content="EasyFlick, Easy FLick, EZ Flick, Minecraft, Minecraft Ressourcenpakete, Minecraft Resourcepacks, Coding, Java, Plugins, Downloads, Wallpaper">
+  <meta name="description" content="Auf der EasyFlick Homepage findest du alle möglichen Downloads zu Minecraft Ressourcenpaketen, Wallpapern und anderen Dingen. Viel Spaß!">
+  <meta name="author" content="fab3F">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <base href="https://easyflick.us.to" target="_self">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  
+  <link rel="manifest" href="/site.webmanifest">
+  
+  
+  
+  <!--Footer Social Media Icons Stylesheet-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  
+  <meta property="og:title" content="EasyFlick Homepage" />
+  <meta property="og:url" content="https://easyflick.us.to" />
+  <meta
+    property="og:description"
+    content="Auf der EasyFlick Homepage findest du alle möglichen Downloads zu Minecraft Ressourcenpaketen, Wallpapern und anderen Dingen. Viel Spaß!"
+  />
+  <meta
+    property="og:image"
+    content="/images/EasyFlick_logo.png"
+  />
+  <meta name="twitter:site" content="@fab3F_official" />
+  <meta
+    name="twitter:card"
+    content="summary"
+  />
+  <meta name="twitter:creator" content="@fab3F_official" />
+  
+  
+  
+ 
+  
+  
+  <style>
+    /* Navigation Bar ---------------------------------------*/
+    
+    :root {
+      --background: rgb(56, 56, 82);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      width:1200px;
+      margin:0;
+    }
+
+    .content {
+      height: 200vh;
+      background-image: url(//unsplash.it/1000/1000);
+      background-color: #333;
+      background-blend-mode: multiply;
+      background-size: cover;
+      display: grid;
+      place-items: center;
+    }
+
+    /* navigation styles start here */
+
+    header {
+      background: var(--background);
+      text-align: center;
+      position: fixed;
+      z-index: 999;
+      width: 100%;
+    }
+
+    /* changed this from the tutorial video to
+       allow it to gain focus, making it tabbable */
+    .nav-toggle {
+      position: absolute !important;
+      top: -9999px !important;
+      left: -9999px !important;
+    }
+
+    .nav-toggle:focus ~ .nav-toggle-label {
+      outline: 3px solid rgba(lightblue, .75);
+    }
+
+    .nav-toggle-label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-left: 1em;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+      display: block;
+      background: white;
+      height: 2px;
+      width: 2em;
+      border-radius: 2px;
+      position: relative;
+    }
+
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+      content: '';
+      position: absolute;
+    }
+
+    .nav-toggle-label span::before {
+      bottom: 7px;
+    }
+
+    .nav-toggle-label span::after {
+      top: 7px;
+    }
+
+    nav {
+      position: absolute;
+      text-align: left;
+      top: 100%;
+      left: 0;
+      background: var(--background);
+      width: 100%;
+      transform: scale(1, 0);
+      transform-origin: top;
+      transition: transform 400ms ease-in-out;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    nav li {
+      margin-bottom: 1em;
+      margin-left: 1em;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      opacity: 0;
+      transition: opacity 150ms ease-in-out;
+    }
+
+    nav a:hover {
+      color: #000;
+    }
+
+    .nav-toggle:checked ~ nav {
+      transform: scale(1,1);
+    }
+
+    .nav-toggle:checked ~ nav a {
+      opacity: 1;
+      transition: opacity 250ms ease-in-out 250ms;
+    }
+
+    @media screen and (min-width: 800px) {
+      .nav-toggle-label {
+        display: none;
+      }
+
+      header {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+      }
+
+      .logo {
+        grid-column: 2 / 3;
+      }
+
+      nav {
+
+        /*all: unset; /* this causes issues with Edge, since it's unsupported */
+
+        /* the following lines are not from my video, but add Edge support */
+        position: relative;
+        text-align: left;
+        transition: none;
+        transform: scale(1,1);
+        background: none;
+        top: initial;
+        left: initial;
+        /* end Edge support stuff */
+
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      nav ul {
+        display: flex;
+      }
+
+      nav li {
+        margin-left: 3em;
+        margin-bottom: 0;
+      }
+
+      nav a {
+        opacity: 1;
+        position: relative;
+      }
+
+      nav a::before {
+        content: '';
+        display: block;
+        height: 5px;
+        background: black;
+        position: absolute;
+        top: -.75em;
+        left: 0;
+        right: 0;
+        transform: scale(0, 1);
+        transition: transform ease-in-out 250ms;
+      }
+
+      nav a:hover::before {
+        transform: scale(1,1);
+      }
+
+
+    }
+    /* Footer ---------------------------------------*/
+
+    
+
+    .footer-distributed {
+      background-color: rgba(38, 38, 56, 0.85);
+      box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.12);
+      box-sizing: border-box;
+      width: 100%;
+      text-align: left;
+      font: normal 16px sans-serif;
+      padding: 45px 50px;
+    }
+
+    .footer-distributed .footer-left p {
+      color: #8f9296;
+      font-size: 14px;
+      margin: 0;
+    }
+    /* Footer links */
+
+    .footer-distributed p.footer-links {
+      font-size: 18px;
+      font-weight: bold;
+      color: #ffffff;
+      margin: 0 0 10px;
+      padding: 0;
+      transition: ease .25s;
+    }
+
+    .footer-distributed p.footer-links a {
+      display: inline-block;
+      line-height: 1.8;
+      text-decoration: none;
+      color: inherit;
+      transition: ease .25s;
+    }
+
+    .footer-distributed .footer-links a:before {
+      content: "·";
+      font-size: 20px;
+      left: 0;
+      color: #fff;
+      display: inline-block;
+      padding-right: 5px;
+    }
+
+    .footer-distributed .footer-links .link-1:before {
+      content: none;
+    }
+
+    .footer-distributed .footer-right {
+      float: right;
+      margin-top: 6px;
+      max-width: 180px;
+    }
+
+    .footer-distributed .footer-right a {
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      background-color: #33383b;
+      border-radius: 2px;
+      font-size: 20px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 35px;
+      margin-left: 3px;
+      transition:all .25s;
+    }
+
+    .footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+
+    .footer-distributed p.footer-links a:hover{text-decoration:underline;}
+
+    .footer-emaillink{
+        color: white;
+    }
+    .footer-emailtext{
+        color: black;
+    }
+    /* Media Queries */
+
+    @media (max-width: 600px) {
+      .footer-distributed .footer-left, .footer-distributed .footer-right {
+        text-align: center;
+      }
+      .footer-distributed .footer-right {
+        float: none;
+        margin: 0 auto 20px;
+      }
+      .footer-distributed .footer-left p.footer-links {
+        line-height: 1.8;
+      }
+    }
+
+    /* Article---------------------------------------*/
+
+    article {
+      display: block;
+    }
+
+
+
+
+    /* Button */
+
+    .glow-on-hover {
+        width: 220px;
+        height: 50px;
+        border: none;
+        outline: none;
+        color: #fff;
+        background: #111;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        border-radius: 10px;
+    }
+
+    .glow-on-hover:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+
+    .glow-on-hover:active {
+        color: #000
+    }
+
+    .glow-on-hover:active:after {
+        background: transparent;
+    }
+
+    .glow-on-hover:hover:before {
+        opacity: 1;
+    }
+
+    .glow-on-hover:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #111;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+  </style>
+  
+  
+  
+  
+  <script>
+    function openDiscord(){
+        window.open("https://fab3F.github.io/link/discord", "_blank");
+    }
+    function download(var link){
+        window.open(link, "_self");
+    }
+  </script>
+</head>
+  
+  
+  
+  
+  
+  
+  
+<body>
+</body>
