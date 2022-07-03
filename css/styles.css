@@ -21,3 +21,8 @@ body {
   margin-right: auto;
   width: 50%;
 }
+
+#image {
+    width: 100%;
+    object-fit: contain;
+}
