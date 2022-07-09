@@ -28,23 +28,27 @@ body {
 }
 
 
-/* Dashed border */
+/* Dashed divider */
 hr.dashed {
   border-top: 3px dashed #bbb;
 }
 
-/* Dotted border */
+/* Dotted divider */
 hr.dotted {
   border-top: 3px dotted #bbb;
 }
 
-/* Solid border */
+/* Solid divider */
 hr.solid {
   border-top: 3px solid #bbb;
 }
 
-/* Rounded border */
+/* Rounded divider */
 hr.rounded {
   border-top: 8px solid #bbb;
   border-radius: 5px;
+}
+
+#noborder {
+    border: none;
 }
