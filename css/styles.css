@@ -49,6 +49,11 @@ hr.rounded {
   border-radius: 5px;
 }
 
-#noborder {
+table, tr, th, td {
     border: none;
+}
+
+td {
+  margin-left: auto;
+  margin-right: auto;
 }
