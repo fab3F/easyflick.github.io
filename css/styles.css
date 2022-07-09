@@ -50,9 +50,6 @@ hr.rounded {
 }
 
 table, tr, th, td {
-    border: none;
-}
-
-td {
+  border: none;
   width: 100%;
 }
