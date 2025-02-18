@@ -7,7 +7,7 @@
 
 # Welcome to EasyFlick
 
-Hier bei EasyFlick und auf der [EasyFlick Homepage](https://easyflick.us.to) findest du alle möglichen Downloads zu Minecraft Ressourcenpaketen, Wallpapern und anderen Dingen. Viel Spaß!
+Hier bei EasyFlick und auf der [EasyFlick Homepage](https://easyflick.ix.tc) findest du alle möglichen Downloads zu Minecraft Ressourcenpaketen, Wallpapern und anderen Dingen. Viel Spaß!
 
 ## Was gibt's denn hier Schönes?
 
@@ -36,7 +36,7 @@ Dort gibt es viele nette Menschen und eure Fragen werden hier am schnellsten bea
 - und natürlich einen schnellen Support!
 ```
 
-### Die EasyFlick [Homepage](https://easyflick.us.to)
+### Die EasyFlick [Homepage](https://easyflick.ix.tc)
 
 ```markdown
 Auf der Homepage gibt es die ganzen Downloads zu den besagten Projekten. 
